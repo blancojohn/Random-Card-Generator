@@ -1,11 +1,23 @@
-/* eslint-disable */
-import "bootstrap";
 import "./style.css";
+let pintas = [`♦`, `♥`, `♠`, `♣`];
+let números = [
+  `A`,
+  `2`,
+  `3`,
+  `4`,
+  `5`,
+  `6`,
+  `7`,
+  `8`,
+  `9`,
+  `10`,
+  `J`,
+  `Q`,
+  `k`
+];
+document.getElementsByName(`card`);
+function RandomCards() {
+  let randomNumber = Math.floor(Math.random() * 4) + 1;
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
-
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+  return randomNumber;
+}
