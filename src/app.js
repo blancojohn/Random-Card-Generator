@@ -15,9 +15,11 @@ let números = [
   `Q`,
   `k`
 ];
-document.getElementsByName(`card`);
-function RandomCards() {
-  let randomNumber = Math.floor(Math.random() * 4) + 1;
-
-  return randomNumber;
-}
+let númerosCard = document.querySelector(".center-card");
+let headerCard = document.querySelector(".header-card");
+let footerCard = document.querySelector(".footer-card");
+let númeroRandom = Math.floor(Math.random() * números.length);
+let pintasRandom = Math.floor(Math.random() * pintas.length);
+númerosCard.innerHTML = números[númeroRandom];
+headerCard.innerHTML = pintas[pintasRandom];
+footerCard.innerHTML = pintas[pintasRandom];
