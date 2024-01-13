@@ -20,6 +20,16 @@ let headerCard = document.querySelector(".header-card");
 let footerCard = document.querySelector(".footer-card");
 let númeroRandom = Math.floor(Math.random() * números.length);
 let pintasRandom = Math.floor(Math.random() * pintas.length);
+let pinta = pintas[pintasRandom];
+
 númerosCard.innerHTML = números[númeroRandom];
-headerCard.innerHTML = pintas[pintasRandom];
-footerCard.innerHTML = pintas[pintasRandom];
+headerCard.innerHTML = pinta;
+footerCard.innerHTML = pinta;
+
+if (pinta == "♦" || pinta == "♥") {
+  headerCard.style.color = "red";
+  footerCard.style.color = "red";
+} else {
+  headerCard.style.color = "black";
+  footerCard.style.color = "black";
+}
